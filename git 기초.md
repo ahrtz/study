@@ -202,3 +202,7 @@ To https://github.com/ahrtz/TIL.git
 `origin` 으로 설정된 저장소에 `push`한다.
 
 저장소를 오리진으로 설정해준 이후에는 그냥 push만 해줘도 된다.
+
+참고하면 좋은 사이트
+https://nolboo.kim/blog/2013/10/06/github-for-beginner/
+https://rogerdudler.github.io/git-guide/index.ko.html
