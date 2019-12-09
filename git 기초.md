@@ -188,6 +188,15 @@ $git remote rm origin
 
 ```bash
 $ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 2.35 KiB | 2.35 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ahrtz/TIL.git
+   cc1bd3f..512b0e1  master -> master
+
 ```
 
 `origin` 으로 설정된 저장소에 `push`한다.
