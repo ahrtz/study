@@ -22,3 +22,5 @@ print(f'{now} 기준 실시간 검색어')
 
 for name in names:
     print(name.text)
+
+    # pip install -r requirements.txt
