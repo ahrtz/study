@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #main-header {
+            color: goldenrod;
+        }
+        .hello-box{
+            height: 100px;
+            background-color: lightgreen;
+        }
+        p {
+            font-size: 35px;
+                  
+        }
+        
+    </style>
 </head>
 <body>
     <!--헤딩 가로로 너비를 끝까지 다먹고있다.-->
-    <h1>hi,h1!</h1>
+    <h1 id="main-header">웰컴페이지 </h1>
     <h2>hi,h2!</h2>
     <h3>hi,h23!</h3>
     <!--bold 이건 글자 길이 만큼만 공간을 먹는다-->
@@ -30,11 +44,18 @@
         되니?
     </pre>
     <!-- div 임의의 공간을 지정(선택)-->
-    <div style="height: 150px;">
+    <div class="hello-box">
         안녕하슈
-        
+    </div>
+    <div class="hello-box">
+        안녕하슈
+    </div>
+    <div class="hello-box">
+        안녕하슈
     </div>
 
+    <!-- 구분선 입력하기-->
+    <hr>
 
 
     <!-- highlighted-->
