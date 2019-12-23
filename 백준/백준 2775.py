@@ -18,7 +18,7 @@ else:
 /////////
 T = int(input())
 
-for _ in range(T):
+for n in range(T):
 
     k = int(input())
 
@@ -26,7 +26,7 @@ for _ in range(T):
 
     people = [ i for i in range(1, n+1)]
 
-    for __ in range(k):
+    for nm in range(k):
 
         for j in range(1,n):
 
