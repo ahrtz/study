@@ -7,18 +7,21 @@ def sosu(n):
         return n 
     else:
         return 0
-n= int(input())
 
-a= input().split()
-b=[]
+a=[]
+start = int(input())
+end= int(input())
 result = []
-for i in range(len(a)):
-    b.append(int(a[i]))
-for i in range(len(b)):
-    result.append(sosu(b[i]))
 c=[]
+for i in range(start,end+1):
+    a.append(i)
+for i in range(len(a)):
+    result.append(sosu(a[i]))
 for i in range(len(result)):
     if result[i] > 0 : 
         c.append(result[i])
-print(len(c))
-
+if len(c)>0:
+    print(sum(c))
+    print(min(c))
+else:
+    print(-1)
