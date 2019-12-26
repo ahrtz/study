@@ -1,5 +1,5 @@
    
-n=123456
+n=123456*2
 sieve = [True] * n
 m = int(n ** 0.5)
 for i in range(2, m + 1):
