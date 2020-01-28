@@ -1,4 +1,8 @@
-a=[]
-for i in range(2):
-    a.append(2) 
+a=[1,2,3,4,5,6]
+b= a.pop()
+print(b)
+b= a.pop()
+print(b)
+b= a.pop()
+print(b)
 print(a)
