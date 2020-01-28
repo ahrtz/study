@@ -1,14 +1,13 @@
 
+# sample = "print('{} {}'.format(1, 2))"
 
 
 T= int(input())
 for i in range(T):
     sample=input()
-    a=sample.count("(")
-    b=sample.count(")")
-    c=sample.count("{")
-    d=sample.count("}")
-    if a==b and c==d:
-        print(1)
-    else:
-        print(0)
+    a_1=sample.count("(")
+    a=sample.index("(")
+    b=sample.index(")")
+    c=sample.index("{")
+    d=sample.index("}")
+    print(a_1)
