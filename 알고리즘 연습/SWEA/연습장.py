@@ -1,8 +1,3 @@
-a=[1,2,3,4,5,6]
-b= a.pop()
-print(b)
-b= a.pop()
-print(b)
-b= a.pop()
-print(b)
-print(a)
+a=int(input())
+result = [[0]*a for _ in range(a)]
+print(result)

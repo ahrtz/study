@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-# sample = "print('{} {}'.format(1, 2))"
-
-
-T= int(input())
-for i in range(T):
-    sample=input()
-    a_1=sample.count("(")
-    a=sample.index("(")
-    b=sample.index(")")
-    c=sample.index("{")
-    d=sample.index("}")
-    print(a_1)
-=======
 gumsa = ["{","}","[","]","(",")"]
 T= int(input())
 for i in range(T):
@@ -44,4 +29,3 @@ for i in range(T):
     # print(result.count("("))
     # print(result.index("(",result.index("(")+1))
     
->>>>>>> acaa034a763853331baf38487d611a0e4fa308b5
