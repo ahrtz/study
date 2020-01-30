@@ -1,6 +1,9 @@
-a=[1,2,3,4,5]
+import math
+a=3+4j
 
-if 2 in a:
-    print(321)
-else:
-    print(12)
+print(math.sqrt(a.imag**2+a.real**2))
+
+print(isinstance(a,complex))
+print(type(-10))
+b= -10
+print(isinstance(b,int))
