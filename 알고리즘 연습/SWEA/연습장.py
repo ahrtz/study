@@ -1,3 +1,6 @@
-a=int(input())
-result = [[0]*a for _ in range(a)]
-print(result)
+a=[1,2,3,4,5]
+
+if 2 in a:
+    print(321)
+else:
+    print(12)
