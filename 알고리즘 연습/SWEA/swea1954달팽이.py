@@ -1,10 +1,3 @@
-
-    
-
-        
-
-
-
 Tc=int(input())
 for tc in range(1,Tc+1):
     a=int(input())
@@ -16,12 +9,12 @@ for tc in range(1,Tc+1):
     row_diff = 0
     col_diff = 1
     num = 1 #들어갈 숫자 
-    visit = [[0]*a for _ in range(a)] # 방문했던 곳인지 체크 
+    
     visited=[]
     while True:
         result[row][col]=num
-        visit[row][col]=1
-        visited.append([row,col]) # 함수용
+        
+        visited.append([row,col]) # 체크용
         
         num += 1
         row += row_diff
