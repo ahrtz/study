@@ -3,13 +3,7 @@ for tc in range(t):
     N_people,M_needtime,K_bread = map(int,input().split())
     people_li = list(map(int,input().split()))
     bbang=0
-    
-
-
-
-    # if M_needtime > min(N_peo_list):
-    #     print("impossible")
-
+  
     for t in range(1,max(people_li)+1):
         if t % M_needtime == 0:
             bbang += K_bread
