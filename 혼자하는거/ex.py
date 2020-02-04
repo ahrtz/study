@@ -1,4 +1,3 @@
-a=[1,2,3,4,5,6,7,8]
-b=a[:5]
-c=a[5:]
-print(c+b)
+import itertools
+a=[1,2,3,4,5,6,7,8,9]
+print(list(itertools.combinations(a,3)))

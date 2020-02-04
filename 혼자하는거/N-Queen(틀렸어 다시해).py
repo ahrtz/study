@@ -18,7 +18,7 @@ def queen(a,N):
             if candidate != []:
                 for i in candidate:
                     sol.append(i) # 후보의 요소를 정답 배열의 i+1로 추가
-                    nqueen(sol, n) # 재귀적으로 다음 행도 확인
+                    queen(sol, n) # 재귀적으로 다음 행도 확인
             else:
                 return 0
 
