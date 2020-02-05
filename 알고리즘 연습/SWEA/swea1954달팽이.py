@@ -2,14 +2,11 @@ Tc=int(input())
 for tc in range(1,Tc+1):
     a=int(input())
     result = [[0]*a for _ in range(a)]
-    
-
     row = 0
     col = 0
     row_diff = 0
     col_diff = 1
     num = 1 #들어갈 숫자 
-    
     visited=[]
     while True:
         result[row][col]=num
@@ -52,33 +49,3 @@ for tc in range(1,Tc+1):
     print("#{}".format(tc))            
     for line in result:
         print(" ".join(str(j)for j in line))
-
-        # print(" ".join(result[i]))
-
-
-
-
-
-
-
-
-    # if row > a-1  :
-        #     row -= 1
-        #     turn()
-        
-        # if  col >a-1 or visit[row][col]==0:
-        #     col -= 1
-        #     turn()
-        
-        # if  row<0  or visit[row][col]==0:
-        #     row += 1
-        #     turn()
-        
-        # if  col < 0 or visit[row][col]==0:
-        #     turn()
-        
-        # if row > a-1 or col >a-1 or row<0 or col < 0 or visit[row][col]==0:
-        #     turn()
-        
-        # if row > a-1 or col >a-1 or row<0 or col < 0 or visit[row][col]==0:
-        #     turn()
