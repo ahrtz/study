@@ -27,9 +27,9 @@ for tc in range(T):
             new_col = ccol + 1
             if 0 <= new_col < N and pan[rrow][new_col]!=color and pan[rrow][new_col]!=0:
                 ccol = new_col
-            if 0 <= new_col < N and pan[rrow][new_col] == 0:
+            elif 0 <= new_col < N and pan[rrow][new_col] == 0:
                 break
-            if 0<= new_col < N and pan[rrow][new_col]==color:
+            elif 0<= new_col < N and pan[rrow][new_col]==color:
                 tmpcol=new_col
                 for tttt in range(ccol,tmpcol,1):
                     pan[rrow][tttt]=color
