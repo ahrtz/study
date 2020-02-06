@@ -7,3 +7,6 @@ tmp_list=set(itertools.permutations(n_list))
 # for i in range(n):
 #     tmp = list(map(int,input().split()))
 #     castle.append(tmp)
+for i in range(len(tmp_list)):
+    castle.insert(0,tmp_list[i])
+    # 궁수 배치 배열
