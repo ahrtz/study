@@ -48,16 +48,7 @@ for i in range(t):
         for nasaa in range(len(nasa)):
             if result[-1][-1]==nasa[nasaa][0]:
                 result.append(nasa[nasaa])
-                print(result)
-                print(len(result))
-                print(len(nasa))          
-                
-                
-                print("$")
-            print(len(result))
-            print(result)
-            print(len(nasa))
-            print("*")
+
             if len(result) == len(nasa)+1:
                 break
         if len(result) == len(nasa)+1:
