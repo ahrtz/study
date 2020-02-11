@@ -32,4 +32,7 @@ for tc in range(T):
             b += puzzle[1+3*i-1][1+3*k]
             b += puzzle[1+3*i-1][1+3*k-1]
         sagak_sum.append(b)
-    print(garo_sum,sero_sum,sagak_sum)
+    if set(garo_sum)==set(sero_sum) and set(sero_sum)==set(sagak_sum):
+        print("#{} {}".format(tc+1,1))
+    else:
+        print("#{} {}".format(tc+1,0))
