@@ -45,9 +45,9 @@ for _ in range(10):
             
             new_r = startx+dx
             new_c = starty+dy
-            print(startx,starty)
-            print(new_r,new_c)
-            print(sp_point,cnt)
+            # print(startx,starty)
+            # print(new_r,new_c)
+            # print(sp_point,cnt)
             if pan[new_r][new_c]==3:
                 result=1
                 break

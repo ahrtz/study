@@ -18,5 +18,6 @@ for tc in range(T):
     res=turn(pan)
     res1=turn(res)
     res2=turn(res1)
+    print("#{}".format(tc+1))
     for i in range(len(res)):
         print("".join(repr(K) for K in res[i]),"".join(repr(K) for K in res1[i]),"".join(repr(K) for K in res2[i]))
