@@ -1,7 +1,7 @@
-def ok(n):
-    if n==n[::-1]:
-        return True
-    else:
-        return False
-a=['C', 'B', 'B', 'C',"a"]
-print(ok(a))
+p={}
+
+for i in range(10):
+    p[i]=i**2
+
+p[1]=[321,3]
+print(p)

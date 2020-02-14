@@ -18,6 +18,7 @@ def tour(a):
                 tmp.append(a[i])
     else:
         for i in range(0,len(a)-1,2):
+            temp = a.pop()
             if a[i][-1]==a[i+1][-1] :
                 tmp.append(a[i])
             elif a[i][-1]==1 and a[i+1][-1]==2:
@@ -32,6 +33,8 @@ def tour(a):
                 tmp.append(a[i+1])
             elif a[i][-1]==3 and a[i+1][-1]==2:
                 tmp.append(a[i])
+            # if i==len(a)-3:
+            #     tmp.append(temp)
     if len(tmp)==1:
         return tmp
     else:

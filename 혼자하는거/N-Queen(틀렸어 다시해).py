@@ -20,10 +20,11 @@ def nqueen(sol, n):
     else:
         return 0
 
-       
-count = 0
-num = int(input())
-for i in range(num): # 첫 행의 경우의 수
-    nqueen([i], num)
-print(count)
+T=int(input())
+for tc in range(T):   
+    count = 0
+    num = int(input())
+    for i in range(num): # 첫 행의 경우의 수
+        nqueen([i], num)
+    print("#{} {}".format(tc+1,count))
 

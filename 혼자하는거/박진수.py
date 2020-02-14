@@ -1,8 +1,12 @@
-a= int(input())
-for i in range(a):
-    str1=input()
-    str2=input()
-    result = []
-    for K in set(str1):
-        result.append(str2.count(K))
-    print("#{} {}".format(i+1,max(result)))
+def jongee(x):
+    if x == N:
+        return 1
+    if x > N:
+        return 0
+    return jongee(x+10) + jongee(x+20) * 2
+
+
+TC = int(input())
+for tc in range(1, TC + 1):
+    N = int(input())
+    print('#{} {}'.format(tc, jongee(0)))

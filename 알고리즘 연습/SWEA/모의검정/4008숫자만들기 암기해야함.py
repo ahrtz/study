@@ -65,26 +65,27 @@ for tc in range(T):
     a=[]
     
     permutation(sign_list,N-1)
+    print(a)
     sign_combi = a
     resu_list=[]
 
     
-    for k in range(len(sign_combi)):
-        tmp=num_list[0]    
-        i=0
-        while i<len(num_list)-1:
-            if sign_combi[k][i]=="+":
-                tmp += num_list[i+1]
-                i+=1
-            elif sign_combi[k][i]=="-":
-                tmp -= num_list[i+1]
-                i+=1
-            elif sign_combi[k][i]=="*":
-                tmp *= num_list[i+1]
-                i+=1
-            elif sign_combi[k][i]=="/":
-                tmp = int(tmp/num_list[i+1])
-                i+=1
-        resu_list.append(tmp)
+    # for k in range(len(sign_combi)):
+    #     tmp=num_list[0]    
+    #     i=0
+    #     while i<len(num_list)-1:
+    #         if sign_combi[k][i]=="+":
+    #             tmp += num_list[i+1]
+    #             i+=1
+    #         elif sign_combi[k][i]=="-":
+    #             tmp -= num_list[i+1]
+    #             i+=1
+    #         elif sign_combi[k][i]=="*":
+    #             tmp *= num_list[i+1]
+    #             i+=1
+    #         elif sign_combi[k][i]=="/":
+    #             tmp = int(tmp/num_list[i+1])
+    #             i+=1
+    #     resu_list.append(tmp)
     
-    print("#{} {}".format(tc+1,max(resu_list)-min(resu_list)))
+    # print("#{} {}".format(tc+1,max(resu_list)-min(resu_list)))
