@@ -28,7 +28,7 @@ def DFS(start_y, start_x):
 TC = int(input())
 for tc in range(1, TC+1):
     N = int(input())
-    Maze = [list(map(int, input())) for _ in range(N)]
+    Maze = list(map(int, input())) for _ in range(N)]
 
     for y in range(N):
         for x in range(N):
@@ -41,7 +41,7 @@ for tc in range(1, TC+1):
 
     visited = []
     result = 0
-    print(start_y,start_x)
+    # print(start_y,start_x)
     DFS(start_y, start_x)
     print(Maze)
     print('#%d %d'%(tc, result))
