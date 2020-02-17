@@ -7,10 +7,12 @@ def f(n,k):
         return
     else:
         L[n] = 0
+        print("?1")
         f(n+1,k)
+        print("?2")
         L[n] = 1
         f(n+1,k)
-
+        print("/")
 
 
 A=[1,2,3,4]
