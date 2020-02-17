@@ -28,12 +28,12 @@ for tc in range(T):
     br,bc=b[0],b[1]
     tmpa=[]
     tmpb=[]
-    for x in Ap:
-        if abs((x[1]-1)-ar)+abs((x[0]-1)-ac)<=x[2]:
-            tmpa.append(x[3])
+    for l in range(len(Ap)):
+        if abs((Ap[l][1]-1)-ar)+abs((Ap[l][0]-1)-ac)<=Ap[l][2]:
+            tmpa.append(Ap[l][3]+0.00000001*l)
             
-        if abs((x[1]-1)-br)+abs((x[0]-1)-bc)<=x[2]:
-            tmpb.append(x[3])
+        if abs((Ap[l][1]-1)-br)+abs((Ap[l][0]-1)-bc)<=Ap[l][2]:
+            tmpb.append(Ap[l][3]+0.00000001*l)
     APower.append(tmpa)
     BPower.append(tmpb)
 
@@ -46,59 +46,59 @@ for tc in range(T):
         b_newy = bc + d[B_route[mv]][1]
         tmp_A=[]
         tmp_B=[]
-        for x in Ap:
-            if abs((x[1]-1)-a_newx)+abs((x[0]-1)-a_newy)<=x[2]:
-                tmp_A.append(x[3])
+        for l in range(len(Ap)):
+            if abs((Ap[l][1]-1)-a_newx)+abs((Ap[l][0]-1)-a_newy)<=Ap[l][2]:
+                tmp_A.append(Ap[l][3]+0.00000001*l)
                 
-            if abs((x[1]-1)-b_newx)+abs((x[0]-1)-b_newy)<=x[2]:
-                tmp_B.append(x[3])
+            if abs((Ap[l][1]-1)-b_newx)+abs((Ap[l][0]-1)-b_newy)<=Ap[l][2]:
+                tmp_B.append(Ap[l][3]+0.00000001*l)
         ar=a_newx
         ac=a_newy
         br=b_newx
         bc=b_newy
         APower.append(tmp_A)
         BPower.append(tmp_B)
-    for i in range(len(APower)):
-        if APower[i]==[]:
-            APower[i]=[0]
-        if BPower[i]==[]:
-            BPower[i]=[0]
+    for asd in range(len(APower)):
+        if APower[asd]==[]:
+            APower[asd]=[0]
+        if BPower[asd]==[]:
+            BPower[asd]=[0]
 
 
 
     cnt = 0
     for i in range(len(APower)):
         if len(APower[i])==1 and len(BPower[i])==1 and APower[i][0]!=BPower[i][0]:
-            cnt+= APower[i][0]
-            cnt+= BPower[i][0]
+            cnt+= int(APower[i][0])
+            cnt+= int(BPower[i][0])
         elif len(APower[i])==1 and len(BPower[i])==1 and APower[i][0]==BPower[i][0]:
-            cnt+= APower[i][0]
+            cnt+= int(APower[i][0]//2)
+            cnt+= int(BPower[i][0]//2)
         else:
-            if len(set(APower[i]) & set(BPower[i]))==0:
-                cnt+= max(APower[i])
-                cnt+= max(BPower[i])
-            if len(set(APower[i]) & set(BPower[i]))>=1:
+            if len(set(APower[i]) & set(BPower[i]))==0: # 교집합이 없으면
+                cnt+= int(max(APower[i]))
+                cnt+= int(max(BPower[i]))
+            if len(set(APower[i]) & set(BPower[i]))>=1: # 있으면
                 APower[i] = sorted(APower[i])
                 BPower[i] = sorted(BPower[i])
                 if APower[i][-1]!=BPower[i][-1]:
-                    cnt+=APower[i][-1]
-                    cnt+=BPower[i][-1]
+                    cnt+=int(APower[i][-1])
+                    cnt+=int(BPower[i][-1])
                 else:
                     ca=0
                     cb=0
                     try:
-                        ca+=APower[i][-1]
-                        ca+=APower[i][-2]
+                        ca+=int(APower[i][-1])
+                        ca+=int(APower[i][-2])
                     except :
                         pass
                     try:
-                        
-                        cb+=BPower[i][-1]
-                        cb+=BPower[i][-2]
-                        
+                        cb+=int(BPower[i][-1])
+                        cb+=int(BPower[i][-2])
                     except :
                         pass
-                    cnt+= max(ca,cb)
+                    cnt+= int(max(ca,cb))
 
     print(APower)
+    print(BPower)
     print("#{} {}".format(tc+1,cnt))
