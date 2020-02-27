@@ -11,7 +11,7 @@ for tc in range(T):
         dire.append(dire_tmp)
         e.append(E_tmp)
     cnt = 0
-    while True: # 시간초과 나니까 위에서 걸러보자 어떠ㅗㅎ게..?
+    while True: # 시간초과 나니까 위에서 걸러보자 어떠ㅗㅎ게..? 포기
         check=[0]*len(rc)
         for i in range(len(rc)):
             if dire[i]==0:
@@ -37,7 +37,7 @@ for tc in range(T):
                     rc.pop(mm)
                     e.pop(mm)
                     dire.pop(mm)
-        rc = list((map(tuple, rc)))
+        rc = list((map(tuple, rc))) # 체크 조건
         if len(rc)!=len(set(rc)):
             used=[0]*len(rc)
             for i in range(len(rc)): # 같은거 체크하기 
@@ -54,7 +54,7 @@ for tc in range(T):
                         e.pop(k)
                         rc.pop(k)
                         dire.pop(k)
-        if len(rc)<=1:
+        if len(rc)<=1: # 한개 이하면 더이상 할이유 없음
             break
         rc = list((map(list, rc)))
     print("#{} {}".format(tc+1,cnt))   
