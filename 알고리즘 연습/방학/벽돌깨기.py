@@ -11,7 +11,7 @@ def bomb(x,y):
             for dir in range(4):
                 x1 = x+d[dir][0]*i
                 y1 = y+d[dir][1]*i
-                if 0<=x1<H and 0<=y1<W:
+                if 0<=x1<W and 0<=y1<H:
                     if pan1[x1][y1]>0:
                         bomb(x1,y1)
                     
@@ -34,7 +34,7 @@ for tc in range(T):
     #     for k in range(H):
     #         tmp.append(pan[k][i])
     #     pan1.append(tmp)
-    N_combi = list(itertools.product(N_list,repeat = N))
+    N_combi = list(itertools.combinations_with_replacement(N_list,N))
     d = ((0,-1),(1,0),(0,1),(-1,0))
     # print(N_combi[0])
     #아래로 깔아내리는 거 
@@ -46,12 +46,11 @@ for tc in range(T):
             tmp=n[i]
             r_num = check(tmp)
             bomb(r_num,tmp)
-            for _ in range(H):
-                for r in range(H-1,-1,-1):
-                    for c in range(W):
-                        if pan1[r][c]==0 and 0<=(r-1):
-                            if pan1[r-1][c]!=0:
-                                pan1[r][c],pan1[r-1][c]=pan1[r-1][c],pan1[r][c]
+            for r in range(H-1,-1,-1):
+                for c in range(W):
+                    if pan1[r][c]==0 and 0<=(r-1):
+                        if pan1[r-1][c]!=0:
+                            pan1[r][c],pan1[r-1][c]=pan1[r-1][c],pan1[r][c]
         
         for fr in range(H):
             for fc in range(W):
@@ -59,8 +58,6 @@ for tc in range(T):
                     cnt += 1 
         if final > cnt:
             final = cnt
-        if final == 0:
-            break
-    print("#{} {}".format(tc+1,final))
+    print(final)
     # 필요한거 터뜨리는거랑 아래로 내리는거 그 행에서 0을 제외한 게 몇번째 행에 있는지 찾는거
 
