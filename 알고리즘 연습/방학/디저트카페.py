@@ -10,3 +10,4 @@ for tc in range(T):
             spr,spc =r,c
             while True:
                 for i in range(4):
+#try except 쓰면 될것같은데 술먹엇으니 내일 
