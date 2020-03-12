@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>레이아웃 실습</title>
+    <style>
+        nav {
+            float: left;
+            height: 100%;
+            margin-left: 40px;
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+        section {
+            float: right;
+            
+        }
+        div{
+            height: 40px;
+        }
+        div:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .sr{
+            display: inline-block;
+            margin-right: 20px;
+            align-items: flex-end;
+            text-underline-position: auto;    
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <article>
+    <div>
+        <nav>
+            BIKESHARE
+        </nav>
+        <section>
+            <p class="sr">ABOUT</p>
+            <p class="sr">LOGIN</p> 
+            <p class="sr">SIGNUP</p> 
+        </section>
+    </div>
+    <p style="text-align: center;">
+    <img src="images/bicycles.jpg" alt="자전거1" >
+    </p>
+    
+    <p style="text-align: center; font-family:'Courier New', Courier, monospace;font-size: 2.5em;"><strong>자전거로 도심을 누벼보세요.</strong></p>
+    
+    <p style="text-align: center;">
+    <img src="images/commuter.jpg" alt="자전거2" width=800px style="text-align: center;">
+    </p>
+    </article>
+</body>
+</html> 

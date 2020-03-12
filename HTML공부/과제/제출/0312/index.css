@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+}
+
+div, header, section, nav{
+    box-sizing: border-box;
+}
+
+article {
+    border: 1px solid black;
+}
+  
