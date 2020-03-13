@@ -1,2 +1,53 @@
 /* 04_community.css */
 /* 아래에 코드를 작성해 주세요. */
+.main{
+    width: 720px;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    top: 80px;
+    
+}
+.free{
+    position: absolute;
+    width: 720px;
+    height: 100px;
+    /* background-color: gainsboro; */
+    left: 50%;
+    margin-left: -50% ;
+    text-align: center;
+}
+.article-items{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 180px;
+    width: 720px;
+    left: 50%;
+    right: 50%;
+    margin-left: -50%;
+    margin-right:-50% ;
+    
+}
+.hr1{
+    width: 100px;
+    background-color: rgb(255, 196, 0);
+    height: 4px;
+    border: 0;
+    /* border: 0.5px solid rgba(255, 217, 0, 0.959); */
+}
+
+h2{
+    font-size: 1em;
+}
+.idate{
+    text-align: right;
+}
+.article-item{
+    flex-direction: column;
+    display: flex;
+    text-align: left;
+    border-bottom: 3px solid black;
+    
+    /* margin-bottom: 3px; */
+}
