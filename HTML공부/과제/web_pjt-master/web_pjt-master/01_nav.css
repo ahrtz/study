@@ -1,0 +1,48 @@
+/* 01_nav.css */
+/* 아래에 코드를 작성해 주세요. */
+.gg {
+    height: 80px; border: 0px;position: fixed; width: 100%; background-color:grey;
+    z-index: 50;
+}
+.gg::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav-logo{
+    float: left;
+    height: 80px;
+    padding-left: 1em;
+    line-height: 80px;
+    vertical-align: middle;
+}
+.nav-items{
+    float: right;
+    margin: 0;
+    line-height: 80px;
+    vertical-align: middle;
+    /* padding-top: 1.5rem; */
+    
+}
+.nav-item{
+    font-size: 1.5rem;
+    
+    
+    display: inline-block;
+    margin: auto;
+    list-style: none;
+    padding:0px 32px 0px 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: wheat;
+}
+nav a:hover{
+    color: lawngreen;
+}
+.nav::after {
+    content: '';
+    display: block;
+    clear: right;
+  }

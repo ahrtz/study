@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+
+}
+nav{
+    padding: 1rem;
+    background-color: gray;
+
+}
+.nav-logo{
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.nav-items {
+    float: right;
+    margin: 0
+}
+
+.nav-item{
+list-style: none;
+display: inline;
+
+}
+/* css로 이미지 짜르기는 가능하지만 
+크기에 맞는 이미지를 만드는게 더 좋다
+*/
+
+.cover{
+    height: 500px;
+    /* 한줄 텍스트일때 , 수직 가운데 정렬
+    line-height: 500px;  1번 방법
+    */
+    /* padding-top: ;이라는 방법도 있다 */
+    /* display: table;
+    width: 100%; 22*/
+    /* 방법3 */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/bicycles.jpg');
+    /* background-size:cover */
+    line-height: 500px;
+}
+/* flex의 특징 
+컨테이너와 자식 요소가 item으로 구성 
+두가지 축을 가지고 표현할 수 있다.
+*/
+.cover-title{
+    margin: 0;
+    /* 방법2 다시 */
+    /* text-align: center; */
+    /* display: table-cell;
+    vertical-align: middle; */
+}
+
+.content{
+    text-align: center;
+}
+
+.content>img{
+widows: 500px;
+
+}

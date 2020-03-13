@@ -1,0 +1,65 @@
+/* 03_home.css */
+/* 아래에 코드를 작성해 주세요. */
+.cover{
+    position: absolute;
+    z-index: 0;
+    top: 80px;
+    display: inline-block;
+    clear: both;
+    background-image: url('images/header.jpg');
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 1em;
+}
+.tex{
+    justify-content: center;
+    line-height: 100px;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button{
+    display: inline-block;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    border-radius: 2mm;
+    font-size: 2rem;
+    color: whitesmoke;
+    background-color: rgb(26, 72, 209)
+    
+}
+button:hover{
+    color: whitesmoke;
+    background-color:rgb(18, 50, 148);
+}
+.btn{
+    margin: 50px;
+    padding: 0;
+}
+
+.skills{
+    display: inline-block;
+    position: absolute;
+    top: 450px;
+    text-align: center;
+    left: 50%;
+    
+    width: 100%;
+    margin-left: -50%;
+}
+.each{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    /* max-width: 1679px; */
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }

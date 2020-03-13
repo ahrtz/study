@@ -1,0 +1,20 @@
+/* 02_footer.css */
+/* 아래에 코드를 작성해 주세요. */
+body{
+    max-height: 100%;
+}
+footer {
+    line-height: 60px;background-color: grey;width: 100%;
+    position: fixed;
+    bottom: 0;
+    vertical-align: center;
+    justify-content: center;
+
+}
+p{
+    line-height: 60px;
+    padding:0 ;
+    margin:0;
+    text-align: center;
+    color: white;
+}

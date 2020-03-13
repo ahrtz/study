@@ -1,0 +1,50 @@
+<!-- emmet-->
+<!-- ! tab을 누르면 아래 기본형-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>레이아웃 실습</title>
+    <!-- link:css 치면 -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav-logo"> BIKESHARE</a>
+        <!-- a+ul>li*3-->
+        <!-- <a href=""></a>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+        <!-- +인접,> 자식 * 갯수-->
+        <!--a+ul.nav-items>li.nav-item*3-->
+        <!-- 클래스 부여한 이유
+        : ul 태그 선택 -> 만약 우리가 목록을 만들게 된다면?
+        -> 모든것이 바뀌어 버린다
+        -->
+        <!-- div: 의미 X
+        li -> 목록
+        -->
+
+        <a href=""></a>
+        <ul class="nav-items">
+            <li class="nav-item"><a href="#">ABOUT</a></li>
+            <li class="nav-item">LOGIN</li>
+            <li class="nav-item">SIGNUP</li>
+        </ul>
+    </nav>
+    <!-- 높이는 컨텐츠 영역 + 자식 높이 -->
+    <section class="cover">
+        <h1 class="cover-title">자전거를 무료로 빌려드림!</h1>
+    </section>
+    <section class="content">
+        <h2>자전거로 도심을 누벼보세요</h2>
+        <img src="images/commuter.jpg" alt = '자전거'>
+
+    </section>
+</body>
+</html> 
