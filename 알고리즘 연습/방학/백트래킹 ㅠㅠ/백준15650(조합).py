@@ -4,10 +4,13 @@ num_list = [i + 1 for i in range(N)]
 check_list = [False] * N
 
 arr = []
-
+result = []
 def dfs(cnt):
+    global result
     if(cnt == M):
-        print(*arr)
+        print(arr)
+        a=arr[:]
+        result.append(a)
         return
     
     for i in range(0, N):
@@ -27,3 +30,4 @@ def dfs(cnt):
             
         
 dfs(0)
+print(result)
