@@ -7,19 +7,19 @@ def addtoLast(data):
         while p.link != None:
             p = p.link
         p.link = Node(data, None)
-# 노드 삭제
+
 def delete(pre):
     if pre == None or pre.link == None:
         print('error')
     else:
         pre.link = pre.link.link
-# 가운데 노드로 삽입
+
 def add(pre, data):
     if pre == None:
         print('error')
     else:
         pre.link = Node(data, pre.link)
-# 첫번째 노드 삽입
+
 def addtoFirst(data):
     global Head
     Head = Node(data, Head)
@@ -30,9 +30,9 @@ class Node:
 
 T = int(input())
 for tc in range(T):
-    # input
+    
     N, M = list(map(int, input().split()))
-    numbers = list(map(int, input().split()))  # 처음 거는 인풋 받아서 만들고
+    numbers = list(map(int, input().split()))  
     # 노드로 삽입
     Head = None
     addtoFirst(numbers[0])
@@ -44,28 +44,29 @@ for tc in range(T):
         temp_numbers = list(map(int, input().split()))
         pre = Head  # 수열의 맨 앞부터 다 돌면서 내가 필요한 지점 찾기
         while pre.link != None:
-            if pre.link.item > temp_numbers[0]:  # 다음 거의 아이템이 나보다 크면
+            if pre.link.item > temp_numbers[0]:  #넣을 인덱스 찾기
                 break
             pre = pre.link
-        # 아이템들을 거기에 넣어줌
-        if pre == Head:  # 맨 앞에 들어가는 경우 Head를 업데이트
+        # 넣기
+        if pre == Head:  
             addtoFirst(temp_numbers[0])
-            pre = Head  # 이걸 안 써서 덮어씌워졌다. pre = pre.link말고 Head값을 가지고 돌도록 해야함
+            pre = Head  
             for item in temp_numbers[1:]:
                 add(pre, item)
                 pre = pre.link
         else:
             for item in temp_numbers:
                 add(pre, item)
-                pre = pre.link  # 연결 잊지 말기
-    # 최종 결과는 뒤집어서 출력
+                pre = pre.link  
+    # 일단 넣고 뒤집기
     pre = Head
     ans = [0] * N * M
-    ind = 0
+    idx = 0
     while pre.link != None:
-        ans[ind] = pre.item
+        ans[idx] = pre.item
         pre = pre.link
-        ind += 1
-    ans[ind] = pre.item  # while문 나오면서 마지막 거리를 안 넣어줬다....
+        idx += 1
+    # 마지막꺼 넣기
+    ans[idx] = pre.item  
     # 출력
     print("#{} {}".format(tc + 1, ' '.join(list(map(str, ans[::-1][:10])))))
