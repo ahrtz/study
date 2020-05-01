@@ -9,10 +9,17 @@ for tc in range(T):
     num,l=input().split()
     num = int(num)
     l=list(l)
-
+    # tmp=0 ## 이건 10진수로 바꿔서 2진수로 바꾸는거 
+    # for i in range(num):
+    #     tmp+= dic_16[l[i]]*16**(num-1-i)
+    # answer=[]
+    # while tmp!=1:
+    #     a=tmp%2
+    #     answer.insert(0,a)
+    #     tmp=tmp//2
+    # answer.insert(0,1)
+    # print("#{} {}".format(tc+1,"".join(repr(k) for k in answer)))
     answer=[]
     for i in range(num):
         answer.append(dic_16[l[i]])
     print("#{} {}".format(tc+1,"".join(answer)))
-# 01110110110001011101101100010110001000110100100110111011
-# 000111011011000101110110110001011000100011010010011011101100
