@@ -1,6 +1,3 @@
-a='12'
-
-
-b='5125463'
-
-print( a in b)
+h=int('1DB176C588D26EC',16)
+# 1DB176C588D26EC
+print(bin(h))
