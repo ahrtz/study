@@ -1,3 +1,9 @@
-routes=[[-20,-15],[-14,-5],[-18,-13],[-5,-3]]
-routes = sorted(routes, key=lambda x: x[1])
-print(routes)
+def solution(routes):
+    routes.sort(key=lambda x: x[1])
+    answer = 1 # 제일 처음 카메라 설치 
+    cam=routes[0][1]    
+    for route in routes:
+        if cam <route[0]:
+            answer+=1
+            cam=route[1]
+    return answer
