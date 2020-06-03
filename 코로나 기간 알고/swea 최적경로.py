@@ -13,12 +13,9 @@ for tc in range(T):
         for k in range(len(tmp_list)//2):
             if k == 0:
                 tmp_sum += abs(sp[0]-tmp_list[2*i[k]])+abs(sp[1]-tmp_list[2*i[k]+1])
-                # print(tmp_sum,k)
             else:
                 tmp_sum += abs(tmp_list[2*i[k-1]]-tmp_list[2*i[k]])+abs(tmp_list[2*i[k-1]+1]-tmp_list[2*i[k]+1])
-                # print(tmp_sum,k)
         tmp_sum += abs(home[0]-tmp_list[i[-1]*2])+abs(home[1]-tmp_list[i[-1]*2+1])
-        # print(i,tmp_sum)
         if tmp_sum<min_sum:
             min_sum=tmp_sum
     print(f"#{tc+1} {min_sum}")
