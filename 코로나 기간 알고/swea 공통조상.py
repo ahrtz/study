@@ -21,7 +21,7 @@ for tc in range(T):
         child[parent_node].append(child_node)
         parent[child_node]=parent_node
     parent_A=[]
-    
+    print(child)
     tmp=target_A
     while True:
         try:

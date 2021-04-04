@@ -1,17 +1,15 @@
-arr = 'abx' 
-N= len(arr)
-order=[]
-
-visit=[0]*N
-def perm(k,n):
-    if k==n:
-        print(order)
-    else:
-        for i in range(N):
-            if visit[i]:continue
-            visit[i] = 1
-            order.append(arr[i])
-            perm(k+1,n)
-            visit[i]=0
-            order.pop()
-perm(0,N)
+T=int(input())
+for tc in range(T):
+    bar=list()
+    tmp=int(input())
+    for _ in range(tmp):
+    	a,b = map(int,(input().split()))
+    	bar.append((a,b))
+    cnt=0
+    for k in range(len(bar)-1):
+        for j in range(k+1,len(bar)):
+            sx,sy=bar[k]
+            ex,ey=bar[j]
+            if sx<ex and sy>ey:
+                cnt+=1
+    print(f"#{tc+1} {cnt}")
