@@ -24,22 +24,22 @@ def solution(numbers, hand):
                 if hand =="right":
                     answer+="R"
                     if number==0:
-                        number=10
+                        number=11
                     rightidx=number
                     
                 else:
                     answer+="L"
                     if number==0:
-                        number=10
+                        number=11
                     leftidx = number
             elif left_dis<right_dis:
                 if number==0:
-                    number=10
+                    number=11
                 answer+='L'
                 leftidx = number
             else:
                 if number==0:
-                    number=10
+                    number=11
                 answer+='R'
                 rightidx=number
     return answer
