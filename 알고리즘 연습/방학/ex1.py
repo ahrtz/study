@@ -1,10 +1,11 @@
-def my_math():
-    pi=3.14
+n = 0
+total = 0
+user_input = int(input()) #input = 10  
 
-    def circum(r):
-        return  2*pi*r
-    return circum
-a=my_math()
-
-print(a(1))
-print(a(3))
+if user_input>10000:
+    print("만넘는거 안해줌")
+else:
+    while n <= user_input:
+        total += n
+        n += 1
+    print(total)    #total = 55
