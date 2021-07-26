@@ -2,7 +2,7 @@
 
 
 
-## model checkpoint 에 대해
+## model checkpoint 에 대해 (중요!)
 
 최고의 accuracy 혹은 loss 가 나온 에포크를 임시 저장해준다. 
 
